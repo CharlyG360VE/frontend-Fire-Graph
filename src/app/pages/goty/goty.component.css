@@ -1,0 +1,9 @@
+.card-columns {
+  column-count: 2;
+}
+.bg-dark {
+  background-color: #0000005c!important;
+}
+.mat-fab.mat-primary {
+  background-color: #c2185bad!important;
+}

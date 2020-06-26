@@ -1,0 +1,25 @@
+<h2><span class="material-icons">games</span> Game of the Year</h2>
+
+<hr>
+
+<div class="loading-indicator" *ngIf="bool">
+  <mat-progress-spinner mode="indeterminate" color="primary"></mat-progress-spinner>
+</div>
+
+<ngb-carousel>
+  <ng-template class="carousel-item" ngbSlide *ngFor="let juego of juegos">
+    <div class="picsum-img-wrapper animated fadeIn fast">
+      <img class="item animated fadeIn" [src]="juego.url" alt="juego.name">
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+<hr>
+
+<h3><span class="material-icons">ballot</span> Resultados</h3>
+
+<div class="row animated fadeIn mt-3">
+  <div class="col animated fadeIn">
+    <app-grafico-barra-horizontal [results]="juegos"></app-grafico-barra-horizontal>
+  </div>
+</div>

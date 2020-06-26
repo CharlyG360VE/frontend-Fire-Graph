@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "firestore-graph-b66ee": {
+      "hosting": {
+        "frontend": [
+          "firestore-graph-b66ee"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "firestore-graph-b66ee"
+  }
+}

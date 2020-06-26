@@ -1,0 +1,16 @@
+<div class="loading-indicator animated fadeIn" *ngIf="bool">
+  <mat-progress-spinner mode="indeterminate" color="primary"></mat-progress-spinner>
+</div>
+
+<div class="container card-columns animated fadeIn">
+  <div class="card bg-dark animated fadeIn" color="primary" *ngFor="let juego of juegos">
+    <div class="card-header bg-transparent"><span class="material-icons mr-1">videogame_asset</span> {{juego.name}}</div>
+    <img [src]="juego.url" class="card-img-top" alt="juego.name">
+    <div class="card-body">
+      <p class="card-text">Presiona el boton para votar por este juego</p>
+      <a mat-fab class="text-center material-icons" color="primary" (click)="votarJuego(juego)">
+        <mat-icon>thumb_up_alt</mat-icon>
+      </a>
+    </div>
+  </div>
+</div>
